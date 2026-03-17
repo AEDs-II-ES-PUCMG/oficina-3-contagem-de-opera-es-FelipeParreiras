@@ -115,7 +115,7 @@ public class App {
             operacoes = 0;
             nanoToMilli = System.currentTimeMillis();
             codigo1(gerarVetor(tamanho));
-            System.out.println("Resultados: \n Quantidade de operações: "+operacoes+"\n Tempo gasto: "+ (System.currentTimeMillis() - nanoToMilli) );
+            System.out.println("Resultados: \n Tamanho do Teste: "+tamanho+"\n Quantidade de operações: "+operacoes+"\n Tempo gasto: "+ (System.currentTimeMillis() - nanoToMilli) );
         }
         System.out.println("\n ========================================== \n");
         System.out.println("Inicinado os testes código 2...");
@@ -123,7 +123,7 @@ public class App {
             operacoes = 0;
             nanoToMilli = System.currentTimeMillis();
             codigo2(gerarVetor(tamanho));
-            System.out.println("Resultados: \n Quantidade de operações: "+operacoes+"\n Tempo gasto: "+ (System.currentTimeMillis() - nanoToMilli) );
+            System.out.println("Resultados: \n Tamanho do Teste: "+tamanho+"\n Quantidade de operações: "+operacoes+"\n Tempo gasto: "+ (System.currentTimeMillis() - nanoToMilli) );
         }
         System.out.println("\n ========================================== \n");
         System.out.println("Inicinado os testes código 3...");
@@ -131,7 +131,7 @@ public class App {
             operacoes = 0;
             nanoToMilli = System.currentTimeMillis();
             codigo3(gerarVetor(tamanho));
-            System.out.println("Resultados: \n Quantidade de operações: "+operacoes+"\n Tempo gasto: "+ (System.currentTimeMillis() - nanoToMilli) );
+            System.out.println("Resultados: \n Tamanho do Teste: "+tamanho+"\n Quantidade de operações: "+operacoes+"\n Tempo gasto: "+ (System.currentTimeMillis() - nanoToMilli) );
         }
         System.out.println("\n ========================================== \n");
         System.out.println("Inicinado os testes código 4...");
@@ -139,7 +139,7 @@ public class App {
             operacoes = 0;
             nanoToMilli = System.currentTimeMillis();
             codigo4(tamanho);
-            System.out.println("Resultados: \n Quantidade de operações: "+operacoes+"\n Tempo gasto: "+ (System.currentTimeMillis() - nanoToMilli) );
+            System.out.println("Resultados: \n Tamanho do Teste: "+tamanho+"\n Quantidade de operações: "+operacoes+"\n Tempo gasto: "+ (System.currentTimeMillis() - nanoToMilli) );
         }
         System.out.println("\n ========================================== \n");
     }
