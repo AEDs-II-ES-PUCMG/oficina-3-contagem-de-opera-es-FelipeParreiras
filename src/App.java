@@ -42,6 +42,7 @@ public class App {
         int resposta = 0;
         for (int i = 0; i < vetor.length; i += 2) {
             resposta += vetor[i]%2;
+            operacoes++;
         }
         return resposta;
     }
@@ -56,6 +57,7 @@ public class App {
         for (int k = (vetor.length - 1); k > 0; k /= 2) {
             for (int i = 0; i <= k; i++) {
                 contador++;
+                operacoes++;
             }
 
         }
@@ -70,6 +72,7 @@ public class App {
         for (int i = 0; i < vetor.length - 1; i++) {
             int menor = i;
             for (int j = i + 1; j < vetor.length; j++) {
+                operacoes++;
                 if (vetor[j] < vetor[menor])
                     menor = j;
             }
@@ -85,6 +88,7 @@ public class App {
      * @return Um inteiro que significa...
      */
     static int codigo4(int n) {
+        operacoes++;
         if (n <= 2)
             return 1;
         else
@@ -105,6 +109,38 @@ public class App {
         
     }
     public static void main(String[] args) {
-        
+        System.out.println("Inicinado os testes...");
+        System.out.println("Inicinado os testes código 1...");
+        for (int tamanho : tamanhosTesteGrande) {
+            operacoes = 0;
+            nanoToMilli = System.currentTimeMillis();
+            codigo1(gerarVetor(tamanho));
+            System.out.println("Resultados: \n Quantidade de operações: "+operacoes+"\n Tempo gasto: "+ (System.currentTimeMillis() - nanoToMilli) );
+        }
+        System.out.println("\n ========================================== \n");
+        System.out.println("Inicinado os testes código 2...");
+        for (int tamanho : tamanhosTesteGrande) {
+            operacoes = 0;
+            nanoToMilli = System.currentTimeMillis();
+            codigo2(gerarVetor(tamanho));
+            System.out.println("Resultados: \n Quantidade de operações: "+operacoes+"\n Tempo gasto: "+ (System.currentTimeMillis() - nanoToMilli) );
+        }
+        System.out.println("\n ========================================== \n");
+        System.out.println("Inicinado os testes código 3...");
+        for (int tamanho : tamanhosTesteMedio) {
+            operacoes = 0;
+            nanoToMilli = System.currentTimeMillis();
+            codigo3(gerarVetor(tamanho));
+            System.out.println("Resultados: \n Quantidade de operações: "+operacoes+"\n Tempo gasto: "+ (System.currentTimeMillis() - nanoToMilli) );
+        }
+        System.out.println("\n ========================================== \n");
+        System.out.println("Inicinado os testes código 4...");
+        for (int tamanho : tamanhosTestePequeno) {
+            operacoes = 0;
+            nanoToMilli = System.currentTimeMillis();
+            codigo4(tamanho);
+            System.out.println("Resultados: \n Quantidade de operações: "+operacoes+"\n Tempo gasto: "+ (System.currentTimeMillis() - nanoToMilli) );
+        }
+        System.out.println("\n ========================================== \n");
     }
 }
